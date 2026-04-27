@@ -14,6 +14,11 @@ import javax.swing.JPanel;
  *
  */
 
+/**
+ * This file governs the panel displayed to the side of the game area. It has text and doesn't change during runtime.
+ * No moving parts, and the function inside only runs once. Easiest Control Flow Diagram of my life.
+ */
+
 public class SidePanel extends JPanel {
 	
 	/**

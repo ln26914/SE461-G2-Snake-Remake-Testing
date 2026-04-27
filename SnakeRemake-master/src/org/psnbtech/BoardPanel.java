@@ -15,6 +15,11 @@ import javax.swing.JPanel;
  *
  */
 
+/**
+ * Noah writes:
+ * This file governs the GUI and funny green snake.
+ */
+
 public class BoardPanel extends JPanel {
 	
 	/**

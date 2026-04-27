@@ -7,6 +7,10 @@ package org.psnbtech;
  *
  */
 
+/**
+ * This file governs the passage of time within the game.
+ */
+
 public class Clock {
 	
 	/**

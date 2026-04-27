@@ -15,6 +15,12 @@ import javax.swing.JFrame;
  *
  */
 
+/**
+ * This is the game engine that backs the GUI.
+ * To read the code that generates the GUI, look in BoardPanel.
+ * To read the code associated with keeping game time, look in Clock.
+ */
+
 public class SnakeGame extends JFrame {
 		
 	/**
