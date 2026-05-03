@@ -17,6 +17,7 @@ public class SidePanelTest {
         Graphics mockGraphics = mock(Graphics.class);               // Creates a fake simulated Graphics class object as SidePanel needs a Graphics object to run. A Graphics object holds the data of what the UI tries to draw. This mock class records all that data without actually displaying it.
         FontMetrics mockFontMetrics = mock(FontMetrics.class);      // Creates a fake simulated FontMetrics class object as SidePanel needs a Graphics object to run. A FontMetrics object is data that holds the formatting for all the text.
 
+        when(mockGraphics.create()).thenReturn(mockGraphics);       // A background library runs this method in SidePanel, so this method needs to have a mocked return of our created graphics object.
         when(mockGame.getScore()).thenReturn(100);              // Create fake game data to test. So when the SidePanel calls game.getScore(), then we should return 100. In this test, our score is 100 to prevent unpredictability rendering it untestable. Without mocking it, it would return 0 by default.
         when(mockGame.getFruitsEaten()).thenReturn(5);          // Create fake game data to test. So when the SidePanel calls game.getFruitsEaten(), then we should return 5. In this test, our FruitsEaten is 5 to prevent unpredictability rendering it untestable.
         when(mockGame.getNextFruitScore()).thenReturn(20);      // Create fake game data to test. So when the SidePanel calls game.getNextFruitScore(), then we should return 20. In this test, our NextFruitScore is 20 to prevent unpredictability rendering it untestable. These are done so all the data that the panel will display is defined.
@@ -40,6 +41,6 @@ public class SidePanelTest {
         verify(mockGraphics).drawString("Move Down: S / Down Arrowkey", 50, 380);   // Verify if this exact string was draw at coordinates x=50 and y=380
         verify(mockGraphics).drawString("Move Left: A / Left Arrowkey", 50, 410);   // Verify if this exact string was draw at coordinates x=50 and y=410
         verify(mockGraphics).drawString("Move Right: D / Right Arrowkey", 50, 440); // Verify if this exact string was draw at coordinates x=50 and y=440
-        verify(mockGraphics).drawString("Pause Game: P",50,480);                    // Verify if this exact string was draw at coordinates x=50 and y=480
+        verify(mockGraphics).drawString("Pause Game: P",50,470);                    // Verify if this exact string was draw at coordinates x=50 and y=480
     }
 }
