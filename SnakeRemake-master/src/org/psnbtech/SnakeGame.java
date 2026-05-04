@@ -110,7 +110,7 @@ public class SnakeGame extends JFrame {
 	 * Creates a new SnakeGame instance. Creates a new window,
 	 * and sets up the controller input.
 	 */
-	private SnakeGame() {
+    SnakeGame() {
 		super("Snake Remake");
 		setLayout(new BorderLayout());
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
